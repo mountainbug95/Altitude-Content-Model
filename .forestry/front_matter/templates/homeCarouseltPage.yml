@@ -20,6 +20,7 @@ fields:
     label: Content Image
   - type: field_group
     name: home_sections
+    label: Home Sections
     fields:
       - type: include
         name: include_carouselPage
