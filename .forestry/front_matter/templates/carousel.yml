@@ -1,0 +1,19 @@
+---
+label: Carousel
+hide_body: true
+is_partial: true
+display_field: identifier
+fields:
+  - type: text
+    name: component
+    label: Component
+    hidden: true
+    default: carousel.html
+    config:
+      required: true
+  - type: text
+    name: identifier
+    label: Identifier
+    default: carousel
+    config:
+      required: true

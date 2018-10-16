@@ -1,0 +1,53 @@
+---
+label: Features
+hide_body: true
+is_partial: true
+display_field: identifier
+fields:
+  - type: text
+    name: component
+    label: Component
+    hidden: true
+    default: features.html
+    config:
+      required: true
+  - type: text
+    name: identifier
+    label: Identifier
+    default: features
+    config:
+      required: true
+  - type: text
+    name: title
+    label: Title
+    description: Section title
+  - type: text
+    name: subtitle
+    label: Subtitle
+    description: Text below the section title
+  - type: field_group_list
+    name: features
+    label: Features List
+    description: The list of features
+    fields:
+      - type: text
+        name: title
+        label: Feature Title
+      - type: text
+        name: subtitle
+        label: Feature Subtitle
+      - type: text
+        name: icon
+        label: Feature Icon
+        description: Font Awesome Icon
+      - type: select
+        name: icon_accent_color
+        label: Icon Accent Color
+        config:
+          source:
+            type: custom
+          options:
+            - accent1
+            - accent2
+            - accent3
+            - accent4
