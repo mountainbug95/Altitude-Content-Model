@@ -27,6 +27,8 @@ fields:
         name: spotlight
         label: Spotlight
         description: Home page spotlight
+        config:
+          required: false
         fields:
           - type: field_group
             name: image
@@ -58,6 +60,8 @@ fields:
         name: carousel
         label: Carousel
         description: Home page Carousel
+        config:
+          required: false
         fields:
           - type: field_group
             name: image
