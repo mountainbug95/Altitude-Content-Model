@@ -22,8 +22,6 @@ fields:
     name: home_sections
     label: Home Sections
     description: If page is to be featured in the home page carousel or spotlights
-    config:
-      required: false
     fields:
       - type: field_group
         name: spotlight
@@ -52,6 +50,8 @@ fields:
             name: weight
             label: Spotlight Weight
             description: The index of the spotlight in home spotlights
+            config:
+              required: true
       - type: field_group
         name: carousel
         label: Carousel
@@ -79,6 +79,8 @@ fields:
             name: weight
             label: Carousel Weight
             description: The index of the carousel section
+            config:
+              required: true
 pages:
   - aliquam.md
   - consequat-ipsum.md
