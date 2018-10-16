@@ -9,6 +9,8 @@ fields:
     name: links
     label: Links
     description: Column links
+    config:
+      labelField: text
     fields:
       - type: text
         name: text

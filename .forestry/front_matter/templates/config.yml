@@ -18,6 +18,8 @@ fields:
         name: actions
         label: Action Buttons
         description: List of action buttons
+        config:
+          labelField: label
         fields:
           - type: include
             name: include_action
@@ -77,6 +79,8 @@ fields:
         name: social_links
         label: Social Links
         description: Contact Methods
+        config:
+          labelField: text
         fields:
           - type: text
             name: text

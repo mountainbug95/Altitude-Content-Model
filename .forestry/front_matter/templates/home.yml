@@ -16,6 +16,8 @@ fields:
         name: items
         label: Banner sections
         description: Sections displayed on the left side of the banner
+        config:
+          labelField: title
         fields:
           - type: text
             name: title
@@ -46,6 +48,8 @@ fields:
         name: slider
         label: Banner Image Slider
         description: List of images to be displayed in the banner image slider
+        config:
+          labelField: img_path
         fields:
           - type: file
             name: img_path
