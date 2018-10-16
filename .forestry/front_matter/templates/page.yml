@@ -22,6 +22,8 @@ fields:
     name: home_sections
     label: Home Sections
     description: If page is to be featured in the home page carousel or spotlights
+    config:
+      required: false
     fields:
       - type: field_group
         name: spotlight
