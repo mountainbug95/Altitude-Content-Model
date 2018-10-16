@@ -1,0 +1,34 @@
+---
+is_partial: true
+fields:
+  - type: field_group
+    name: spotlight
+    label: Spotlight
+    description: Home page spotlight
+    fields:
+      - type: field_group
+        name: image
+        label: Home Spotlight Image
+        fields:
+          - type: file
+            name: url
+            label: Image
+          - type: text
+            name: data_position
+            label: Data Position
+            description: 'example: left'
+      - type: text
+        name: title
+        label: Home Spotlight Title
+        config:
+          required: true
+      - type: text
+        name: excerpt
+        label: Home Spotlight Excerpt
+        description: Excerpt to bedisplayed in the home spotlight
+      - type: number
+        name: weight
+        label: Spotlight Weight
+        description: The index of the spotlight in home spotlights
+        config:
+          required: true

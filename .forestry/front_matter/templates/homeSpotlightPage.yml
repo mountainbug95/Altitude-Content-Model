@@ -1,5 +1,5 @@
 ---
-label: Page
+label: Home Spotlight Page
 is_partial: false
 fields:
   - type: text
@@ -18,6 +18,13 @@ fields:
   - type: file
     name: content_img_path
     label: Content Image
+  - type: field_group
+    name: home_sections
+    fields:
+      - type: include
+        name: include_spotlightPage
+        label: Include spotlightPage
+        template: spotlightPage
 pages:
   - aliquam.md
   - consequat-ipsum.md

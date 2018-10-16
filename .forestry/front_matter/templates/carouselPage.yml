@@ -1,0 +1,38 @@
+---
+is_partial: true
+fields:
+  - type: field_group
+    name: carousel
+    label: Carousel
+    description: Home page Carousel
+    fields:
+      - type: field_group
+        name: image
+        label: Home Carousel Image
+        config:
+          required: true
+        fields:
+          - type: file
+            name: url
+            label: Image
+            config:
+              required: true
+          - type: text
+            name: data_position
+            label: Data Position
+            description: 'example: left'
+      - type: text
+        name: title
+        label: Carousel Section Title
+        config:
+          required: true
+      - type: text
+        name: subtitle
+        label: Carousel Section Subtitle
+        description: Text below the section title
+      - type: number
+        name: weight
+        label: Carousel Weight
+        description: The index of the carousel section
+        config:
+          required: true
