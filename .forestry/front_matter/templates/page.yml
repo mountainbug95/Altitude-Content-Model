@@ -27,8 +27,6 @@ fields:
         name: spotlight
         label: Spotlight
         description: Home page spotlight
-        config:
-          required: false
         fields:
           - type: field_group
             name: image
@@ -44,8 +42,6 @@ fields:
           - type: text
             name: title
             label: Home Spotlight Title
-            config:
-              required: true
           - type: text
             name: excerpt
             label: Home Spotlight Excerpt
@@ -54,26 +50,18 @@ fields:
             name: weight
             label: Spotlight Weight
             description: The index of the spotlight in home spotlights
-            config:
-              required: true
       - type: field_group
         name: carousel
         label: Carousel
         description: Home page Carousel
-        config:
-          required: false
         fields:
           - type: field_group
             name: image
             label: Home Carousel Image
-            config:
-              required: true
             fields:
               - type: file
                 name: url
                 label: Image
-                config:
-                  required: true
               - type: text
                 name: data_position
                 label: Data Position
@@ -81,8 +69,6 @@ fields:
           - type: text
             name: title
             label: Carousel Section Title
-            config:
-              required: true
           - type: text
             name: subtitle
             label: Carousel Section Subtitle
@@ -91,8 +77,6 @@ fields:
             name: weight
             label: Carousel Weight
             description: The index of the carousel section
-            config:
-              required: true
 pages:
   - aliquam.md
   - consequat-ipsum.md
