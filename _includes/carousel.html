@@ -1,14 +1,16 @@
 <!-- Section -->
 <section class="carousel {{ include.section.background_accent_color }}">
-    {% assign arr = include.site.pages | where_exp: 'item', 'item.home_sections.carousel.enabled.true != nil' | sort: 'home_sections.carousel.weight' %}
+    {% assign arr = include.site.pages | where_exp: 'item', 'item.home_sections.carousel.enabled != nil' | sort: 'home_sections.carousel.weight' %}
     {% for page in arr %}
-        <article>
-            <div class="image"><img src="{{ page.home_sections.carousel.image.url | relative_url }}" alt="" data-position="{{ page.home_sections.carousel.image.data_position }}" /></div>
-            <div class="content">
-                <h3>{{ page.home_sections.carousel.title }}</h3>
-                <p>{{ page.home_sections.carousel.subtitle }}</p>
-            </div>
-        </article>
+        {% if page.home_sections.carousel.weight != null %}
+            <article>
+                <div class="image"><img src="{{ page.home_sections.carousel.image.url | relative_url }}" alt="" data-position="{{ page.home_sections.carousel.image.data_position }}" /></div>
+                <div class="content">
+                    <h3>{{ page.home_sections.carousel.title }}</h3>
+                    <p>{{ page.home_sections.carousel.subtitle }}</p>
+                </div>
+            </article>
+        {% endif %}
     {% endfor %}
     <nav>
         <a href="#" class="previous"><span class="label">Previous</span></a>

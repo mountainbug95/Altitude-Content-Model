@@ -5,18 +5,20 @@
         <p>{{ include.section.subtitle }}</p>
     </header>
     <div class="spotlights">
-        {% assign arr = include.site.pages | where_exp: 'item', 'item.home_sections.spotlight.enabled.true != nil' | sort: 'home_sections.spotlight.weight' %}
+        {% assign arr = include.site.pages | where_exp: 'item', 'item.home_sections.spotlight.enabled != nil' | sort: 'home_sections.spotlight.weight' %}
         {% for page in arr %}
-            <article>
-                <div class="image"><img src="{{ page.home_sections.spotlight.image.url | relative_url }}" alt="" data-position="{{ page.home_sections.spotlight.image.data_position }}" /></div>
-                <div class="content">
-                    <h3>{{ page.home_sections.spotlight.title }}</h3>
-                    <p>{{ page.home_sections.spotlight.excerpt }}</p>
-                    <ul class="actions special">
-                        <li><a href="{{ page.url | relative_url }}" class="button primary">More</a></li>
-                    </ul>
-                </div>
-            </article>
+            {% if page.home_sections.spotlight.weight != null %}
+                <article>
+                    <div class="image"><img src="{{ page.home_sections.spotlight.image.url | relative_url }}" alt="" data-position="{{ page.home_sections.spotlight.image.data_position }}" /></div>
+                    <div class="content">
+                        <h3>{{ page.home_sections.spotlight.title }}</h3>
+                        <p>{{ page.home_sections.spotlight.excerpt }}</p>
+                        <ul class="actions special">
+                            <li><a href="{{ page.url | relative_url }}" class="button primary">More</a></li>
+                        </ul>
+                    </div>
+                </article>
+            {% endif %}
         {% endfor %}
     </div>
 </section>
