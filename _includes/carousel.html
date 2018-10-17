@@ -2,7 +2,7 @@
 <section class="carousel {{ include.section.background_accent_color }}">
     {% assign arr = include.site.pages | where_exp: 'item', 'item.home_sections.carousel.enabled != nil' | sort: 'home_sections.carousel.weight' %}
     {% for page in arr %}
-        {% if page.home_sections.carousel.enabled %}
+        {% if page.home_sections.carousel.weight > 0 %}
             <article>
                 <div class="image"><img src="{{ page.home_sections.carousel.image.url | relative_url }}" alt="" data-position="{{ page.home_sections.carousel.image.data_position }}" /></div>
                 <div class="content">
