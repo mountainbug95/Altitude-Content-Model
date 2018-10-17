@@ -54,7 +54,6 @@ fields:
             name: weight
             label: Spotlight Weight
             description: The index of the spotlight in home spotlights
-            default: 0
       - type: field_group
         name: carousel
         label: Carousel
@@ -86,7 +85,6 @@ fields:
             name: weight
             label: Carousel Weight
             description: The index of the carousel section
-            default: 0
 pages:
   - aliquam.md
   - consequat-ipsum.md
