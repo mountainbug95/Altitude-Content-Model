@@ -54,7 +54,6 @@ fields:
             name: weight
             label: Spotlight Weight
             description: The index of the spotlight in home spotlights
-            default: 1
       - type: field_group
         name: carousel
         label: Carousel
