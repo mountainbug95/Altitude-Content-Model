@@ -7,7 +7,7 @@
     <div class="spotlights">
         {% assign arr = include.site.pages | where_exp: 'item', 'item.home_sections.spotlight.enabled != nil' | sort: 'home_sections.spotlight.weight' %}
         {% for page in arr %}
-            {% if page.home_sections.spotlight.weight != null %}
+            {% if page.home_sections.spotlight.enabled %}
                 <article>
                     <div class="image"><img src="{{ page.home_sections.spotlight.image.url | relative_url }}" alt="" data-position="{{ page.home_sections.spotlight.image.data_position }}" /></div>
                     <div class="content">
