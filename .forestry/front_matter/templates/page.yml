@@ -63,6 +63,7 @@ fields:
           - type: boolean
             name: enabled
             label: Enabled
+            default: false
           - type: field_group
             name: image
             label: Home Carousel Image
