@@ -83,7 +83,7 @@ fields:
             description: Text below the section title
           - type: number
             name: weight
-            label: Carousel weight
+            label: Carousel Weight
             description: The index of the carousel section
 pages:
   - aliquam.md
