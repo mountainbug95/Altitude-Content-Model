@@ -3,6 +3,7 @@ title: Aliquam
 content_img_path: images/pic09.jpg
 home_sections:
   spotlight:
+    enabled: true
     image:
       url: images/pic07.jpg
       data_position: center

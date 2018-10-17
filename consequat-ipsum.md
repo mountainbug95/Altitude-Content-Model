@@ -3,6 +3,7 @@ title: Consequat ipsum
 content_img_path: images/pic09.jpg
 home_sections:
   carousel:
+    enabled: true
     image:
       url: images/pic05.jpg
       data_position: center

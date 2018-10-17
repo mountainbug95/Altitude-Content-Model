@@ -3,6 +3,7 @@ title: Magna tempus
 content_img_path: images/pic09.jpg
 home_sections:
   carousel:
+    enabled: true
     image:
       url: images/pic04.jpg
       data_position: center

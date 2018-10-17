@@ -4,6 +4,7 @@ content_img_path: images/pic09.jpg
 home_sections:
   spotlight:
     image:
+      enabled: true
       url: images/pic08.jpg
       data_position: center
     title: Pellentesque fermentum
