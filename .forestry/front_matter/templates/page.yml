@@ -46,8 +46,6 @@ fields:
           - type: text
             name: title
             label: Home Spotlight Title
-            config:
-              required: false
           - type: text
             name: excerpt
             label: Home Spotlight Excerpt
