@@ -2,7 +2,7 @@
 <section class="main accent2">
     <header class="major">
         <h2>{{ site.footer.contact.title }}</h2>
-        <p>{{ site.footer.contact.subtitle }}</p>
+        {{ site.footer.contact.subtitle | markdownify }}
     </header>
     <form method="post" action="#" class="combined">
         <input type="email" name="email" id="email" placeholder="Email address" class="invert" />

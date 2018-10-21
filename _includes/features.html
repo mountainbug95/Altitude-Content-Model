@@ -2,14 +2,14 @@
 <section class="main">
     <header class="major">
         <h2>{{ include.section.title }}</h2>
-        <p>{{ include.section.subtitle }}</p>
+        {{ include.section.subtitle | markdownify }}
     </header>
     <div class="features">
         {% for feature in include.section.features %}
             <section>
                 <span class="icon {{ feature.icon }} major {{ feature.icon_accent_color }}"></span>
                 <h3>{{ feature.title }}</h3>
-                <p>{{ feature.subtitle }}</p>
+                {{ feature.subtitle | markdownify }}
             </section>
         {% endfor %}
     </div>

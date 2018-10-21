@@ -17,3 +17,13 @@ fields:
     default: spotlight
     config:
       required: true
+  - type: text
+    name: title
+    label: Spotlight Section Title
+  - type: textarea
+    name: subtitle
+    label: Spotlight Section Subtitle
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown

@@ -2,7 +2,7 @@
 <section class="main">
     <header class="major">
         <h2>{{ include.section.title }}</h2>
-        <p>{{ include.section.subtitle }}</p>
+        {{ include.section.subtitle | markdownify }}
     </header>
     <div class="spotlights">
         {% assign arr = include.site.pages | where_exp: 'item', 'item.home_sections.spotlight.enabled == true' | sort: 'home_sections.spotlight.weight' %}

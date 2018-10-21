@@ -39,10 +39,14 @@ fields:
             name: title
             label: Title
             description: The contact section title
-          - type: text
+          - type: textarea
             name: subtitle
             label: Subtitle
             description: The contact section subtitle
+            config:
+              wysiwyg: true
+              schema:
+                format: markdown
       - type: field_group
         name: links_col1
         label: First links column

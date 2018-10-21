@@ -77,10 +77,14 @@ fields:
           - type: text
             name: title
             label: Carousel Section Title
-          - type: text
+          - type: textarea
             name: subtitle
             label: Carousel Section Subtitle
             description: Text below the section title
+            config:
+              wysiwyg: true
+              schema:
+                format: markdown
           - type: number
             name: weight
             label: Carousel Weight

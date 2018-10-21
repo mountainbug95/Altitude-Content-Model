@@ -6,7 +6,7 @@
             <div class="image"><img src="{{ page.home_sections.carousel.image.url | relative_url }}" alt="" data-position="{{ page.home_sections.carousel.image.data_position }}" /></div>
             <div class="content">
                 <h3>{{ page.home_sections.carousel.title }}</h3>
-                <p>{{ page.home_sections.carousel.subtitle }}</p>
+                {{ page.home_sections.carousel.subtitle | markdownify }}
             </div>
         </article>
     {% endfor %}

@@ -6,8 +6,12 @@ fields:
   - type: text
     name: title
     label: Title
-  - type: text
+  - type: textarea
     name: subtitle
     label: Subtitle
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
 pages:
   - elements.md

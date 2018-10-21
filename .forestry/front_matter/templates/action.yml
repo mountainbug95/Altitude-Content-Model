@@ -12,6 +12,8 @@ fields:
   - type: boolean
     name: is_scrolly
     label: IS Scrolly
+    default: false
   - type: boolean
     name: is_primary
     label: Is Primary
+    default: false
