@@ -89,6 +89,13 @@ fields:
             name: weight
             label: Carousel Weight
             description: The index of the carousel section
+  - type: text
+    name: template
+    label: Template
+    hidden: true
+    default: page
+    config:
+      required: true
 pages:
   - aliquam.md
   - consequat-ipsum.md
