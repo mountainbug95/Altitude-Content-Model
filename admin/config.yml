@@ -1,0 +1,514 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: uploads
+public_folder: /uploads
+collections:
+  - name: config
+    label: Config
+    files:
+      - name: config
+        label: Config
+        file: _config.yml
+        fields:
+          - name: title
+            label: Title
+            widget: text
+            required: true
+          - name: menu
+            widget: object
+            required: false
+            label: Menu
+            hint: Menu configuration
+            fields:
+              - name: actions
+                widget: list
+                required: false
+                label: Action Buttons
+                hint: List of action buttons
+                fields:
+                  - name: label
+                    widget: string
+                    required: false
+                    label: Label
+                  - name: url
+                    widget: string
+                    required: false
+                    label: URL
+                  - name: is_scrolly
+                    widget: boolean
+                    required: false
+                    label: IS Scrolly
+                    default: false
+                  - name: is_primary
+                    widget: boolean
+                    required: false
+                    label: Is Primary
+                    default: false
+          - name: footer
+            widget: object
+            required: false
+            label: Footer
+            hint: Footer configuration
+            fields:
+              - name: contact
+                widget: object
+                required: false
+                label: Contact
+                hint: The contact section of the footer
+                fields:
+                  - name: title
+                    widget: string
+                    required: false
+                    label: Title
+                    hint: The contact section title
+                  - name: subtitle
+                    widget: markdown
+                    required: false
+                    label: Subtitle
+                    hint: The contact section subtitle
+              - name: links_col1
+                widget: object
+                required: false
+                label: First links column
+                fields:
+                  - name: title
+                    widget: string
+                    required: false
+                    label: Title
+                    hint: Column title
+                  - name: links
+                    widget: list
+                    required: false
+                    label: Links
+                    hint: Column links
+                    fields:
+                      - name: text
+                        widget: string
+                        required: false
+                        label: Link text
+                      - name: link
+                        widget: string
+                        required: false
+                        label: URL
+              - name: links_col2
+                widget: object
+                required: false
+                label: Second links column
+                fields:
+                  - name: title
+                    widget: string
+                    required: false
+                    label: Title
+                    hint: Column title
+                  - name: links
+                    widget: list
+                    required: false
+                    label: Links
+                    hint: Column links
+                    fields:
+                      - name: text
+                        widget: string
+                        required: false
+                        label: Link text
+                      - name: link
+                        widget: string
+                        required: false
+                        label: URL
+              - name: links_col3
+                widget: object
+                required: false
+                label: Third links column
+                fields:
+                  - name: title
+                    widget: string
+                    required: false
+                    label: Title
+                    hint: Column title
+                  - name: links
+                    widget: list
+                    required: false
+                    label: Links
+                    hint: Column links
+                    fields:
+                      - name: text
+                        widget: string
+                        required: false
+                        label: Link text
+                      - name: link
+                        widget: string
+                        required: false
+                        label: URL
+              - name: links_col4
+                widget: object
+                required: false
+                label: Fourth links column
+                fields:
+                  - name: title
+                    widget: string
+                    required: false
+                    label: Title
+                    hint: Column title
+                  - name: links
+                    widget: list
+                    required: false
+                    label: Links
+                    hint: Column links
+                    fields:
+                      - name: text
+                        widget: string
+                        required: false
+                        label: Link text
+                      - name: link
+                        widget: string
+                        required: false
+                        label: URL
+              - name: social_links
+                widget: list
+                required: false
+                label: Social Links
+                hint: Contact Methods
+                fields:
+                  - name: text
+                    widget: string
+                    required: false
+                    label: Contact method description
+                  - name: icon
+                    widget: string
+                    required: false
+                    label: Icon
+                    hint: Font Awesome Icon
+                  - name: link
+                    widget: string
+                    required: false
+                    label: URL
+              - name: copyright
+                widget: string
+                required: false
+                label: Copyright
+                hint: Copyright displayed at the bottom of the page
+          - name: palette
+            widget: select
+            required: false
+            label: Color Palette
+            options:
+              - cyan
+              - purple
+          - name: palettes
+            widget: hidden
+            required: false
+  - name: home
+    label: Home
+    files:
+      - name: home
+        label: Home
+        file: index.md
+        fields:
+          - name: title
+            widget: string
+            required: false
+            label: Title
+            hint: Page title
+          - name: banner
+            widget: object
+            required: false
+            label: Banner
+            hint: Home page banner
+            fields:
+              - name: items
+                widget: list
+                required: false
+                label: Banner sections
+                hint: Sections displayed on the left side of the banner
+                fields:
+                  - name: title
+                    widget: string
+                    required: false
+                    label: Section Title
+                    hint: Banner Section Title
+                  - name: subtitle
+                    widget: markdown
+                    required: false
+                    label: Banner Section Subtitle
+                    hint: The text that appears below the banner section title
+                  - name: action
+                    widget: object
+                    required: false
+                    label: Banner Section Action
+                    hint: The action button for the banner section
+                    fields:
+                      - name: label
+                        widget: string
+                        required: false
+                        label: Label
+                      - name: url
+                        widget: string
+                        required: false
+                        label: URL
+                      - name: is_scrolly
+                        widget: boolean
+                        required: false
+                        label: Is Scrolly
+                        default: false
+                      - name: is_primary
+                        widget: boolean
+                        required: false
+                        label: Is Primary
+                        default: true
+              - name: slider
+                widget: list
+                required: false
+                label: Banner Image Slider
+                hint: List of images to be displayed in the banner image slider
+                fields:
+                  - name: img_path
+                    widget: image
+                    required: false
+                    label: Image
+                  - name: data_position
+                    widget: string
+                    required: false
+                    label: Image Data Position
+                    hint: 'Example: top left'
+          - name: show_contact
+            widget: boolean
+            required: false
+            label: Show Contact Section
+            default: false
+            hint: Displays the contact section at the bottom of the page
+          - name: sections
+            widget: list
+            required: false
+            label: Sections
+            hint: Home Sections
+            types:
+              - name: features
+                widget: object
+                label: Features
+                fields:
+                  - name: component
+                    widget: hidden
+                    required: true
+                    label: Component
+                    default: features.html
+                  - name: identifier
+                    widget: string
+                    required: true
+                    label: Identifier
+                    default: features
+                  - name: title
+                    widget: string
+                    required: false
+                    label: Title
+                    hint: Section title
+                  - name: subtitle
+                    widget: markdown
+                    required: false
+                    label: Subtitle
+                    hint: Text below the section title
+                  - name: features
+                    widget: list
+                    required: false
+                    label: Features List
+                    hint: The list of features
+                    fields:
+                      - name: title
+                        widget: string
+                        required: false
+                        label: Feature Title
+                      - name: subtitle
+                        widget: markdown
+                        required: false
+                        label: Feature Subtitle
+                      - name: icon
+                        widget: string
+                        required: false
+                        label: Feature Icon
+                        hint: Font Awesome Icon
+                      - name: icon_accent_color
+                        widget: select
+                        required: false
+                        label: Icon Accent Color
+                        options:
+                          - accent1
+                          - accent2
+                          - accent3
+                          - accent4
+              - name: carousel
+                widget: object
+                label: Carousel
+                fields:
+                  - name: component
+                    widget: hidden
+                    required: true
+                    label: Component
+                    default: carousel.html
+                  - name: identifier
+                    widget: string
+                    required: true
+                    label: Identifier
+                    default: carousel
+              - name: spotlight
+                widget: object
+                label: Spotlight
+                fields:
+                  - name: component
+                    widget: hidden
+                    required: true
+                    label: Component
+                    default: spotlight.html
+                  - name: identifier
+                    widget: string
+                    required: true
+                    label: Identifier
+                    default: spotlight
+                  - name: title
+                    widget: string
+                    required: false
+                    label: Spotlight Section Title
+                  - name: subtitle
+                    widget: markdown
+                    required: false
+                    label: Spotlight Section Subtitle
+          - name: layout
+            widget: hidden
+            required: true
+            label: Layout
+            default: home
+  - name: page
+    label: Pages
+    folder: /
+    filter:
+      field: layout
+      value: page
+    create: true
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - name: title
+        widget: string
+        required: true
+        label: Page Title
+      - name: subtitle
+        widget: markdown
+        required: false
+        label: Page Subtitle
+        hint: Appears below the page title
+      - name: content_img_path
+        widget: image
+        required: false
+        label: Content Image
+      - name: home_sections
+        widget: object
+        required: false
+        label: Home Sections
+        hint: If page is to be featured in the home page carousel or spotlights
+        fields:
+          - name: spotlight
+            widget: object
+            required: false
+            label: Spotlight
+            hint: Home page spotlight
+            fields:
+              - name: enabled
+                widget: boolean
+                required: false
+                label: Enabled
+                default: false
+              - name: image
+                widget: object
+                required: false
+                label: Home Spotlight Image
+                fields:
+                  - name: url
+                    widget: image
+                    required: false
+                    label: Image
+                  - name: data_position
+                    widget: string
+                    required: false
+                    label: Data Position
+                    hint: 'example: left'
+              - name: title
+                widget: string
+                required: false
+                label: Home Spotlight Title
+              - name: excerpt
+                widget: string
+                required: false
+                label: Home Spotlight Excerpt
+                hint: Excerpt to bedisplayed in the home spotlight
+              - name: weight
+                widget: number
+                required: false
+                label: Spotlight Weight
+                hint: The index of the spotlight in home spotlights
+                valueType: int
+          - name: carousel
+            widget: object
+            required: false
+            label: Carousel
+            hint: Home page Carousel
+            fields:
+              - name: enabled
+                widget: boolean
+                required: false
+                label: Enabled
+                default: false
+              - name: image
+                widget: object
+                required: false
+                label: Home Carousel Image
+                fields:
+                  - name: url
+                    widget: image
+                    required: false
+                    label: Image
+                  - name: data_position
+                    widget: string
+                    required: false
+                    label: Data Position
+                    hint: 'example: left'
+              - name: title
+                widget: string
+                required: false
+                label: Carousel Section Title
+              - name: subtitle
+                widget: markdown
+                required: false
+                label: Carousel Section Subtitle
+                hint: Text below the section title
+              - name: weight
+                widget: number
+                required: false
+                label: Carousel Weight
+                hint: The index of the carousel section
+                valueType: int
+      - name: layout
+        widget: hidden
+        required: true
+        label: Layout
+        default: page
+      - name: body
+        label: Content
+        widget: markdown
+  - name: elements
+    label: Elements
+    files:
+      - name: elements
+        label: Elements
+        file: elements.md
+        fields:
+          - name: title
+            widget: string
+            required: false
+            label: Title
+          - name: subtitle
+            widget: markdown
+            required: false
+            label: Subtitle
+          - name: layout
+            widget: hidden
+            required: true
+            label: Layout
+            default: elements
