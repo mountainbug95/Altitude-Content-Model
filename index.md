@@ -44,16 +44,16 @@ sections:
         icon_accent_color: accent4
     identifier: features
     component: features.html
-    widget: features
+    template: features
   - background_accent_color: accent4
     identifier: carousel
     component: carousel.html
-    widget: carousel
+    template: carousel
   - title: Sed tempus aliquam
     subtitle: Lorem ipsum dolor sit amet
     identifier: spotlight
     component: spotlight.html
-    widget: spotlight
+    template: spotlight
 menus:
   main:
     title: Home
