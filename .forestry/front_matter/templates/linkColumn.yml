@@ -1,4 +1,5 @@
 ---
+label: Link Column
 is_partial: true
 fields:
   - type: text

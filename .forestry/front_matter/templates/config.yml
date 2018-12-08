@@ -53,7 +53,7 @@ fields:
         fields:
           - type: include
             name: include_linkColumn
-            label: Include linkColumn
+            label: Link Column
             template: linkColumn
       - type: field_group
         name: links_col2
@@ -61,7 +61,7 @@ fields:
         fields:
           - type: include
             name: include_linkColumn
-            label: Include linkColumn
+            label: Link Column
             template: linkColumn
       - type: field_group
         name: links_col3
@@ -69,7 +69,7 @@ fields:
         fields:
           - type: include
             name: include_linkColumn
-            label: Include linkColumn
+            label: Link Column
             template: linkColumn
       - type: field_group
         name: links_col4
@@ -77,7 +77,7 @@ fields:
         fields:
           - type: include
             name: include_linkColumn
-            label: Include linkColumn
+            label: Link Column
             template: linkColumn
       - type: field_group_list
         name: social_links
@@ -109,3 +109,31 @@ fields:
       options:
         - cyan
         - purple
+  - type: field_group
+    name: palettes
+    hidden: true
+    fields:
+      - type: field_group
+        name: cyan
+        fields:
+          - type: field_group
+            name: sass
+            fields:
+              - type: text
+                name: accent2
+              - type: text
+                name: accent3
+              - type: text
+                name: accent4
+      - type: field_group
+        name: purple
+        fields:
+          - type: field_group
+            name: sass
+            fields:
+              - type: text
+                name: accent2
+              - type: text
+                name: accent3
+              - type: text
+                name: accent4

@@ -90,8 +90,8 @@ fields:
             label: Carousel Weight
             description: The index of the carousel section
   - type: text
-    name: template
-    label: Template
+    name: layout
+    label: Layout
     hidden: true
     default: page
     config:
