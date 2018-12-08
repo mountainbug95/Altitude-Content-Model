@@ -197,6 +197,7 @@ collections:
           - name: palettes
             widget: hidden
             required: false
+            label: Palettes
   - name: home
     label: Home
     files:
