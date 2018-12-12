@@ -2,13 +2,8 @@
 label: Section
 hide_body: true
 is_partial: true
-display_field: identifier
+display_field: type
 fields:
-  - type: text
-    name: identifier
-    label: Identifier
-    config:
-      required: true
   - type: text
     name: component
     label: Component

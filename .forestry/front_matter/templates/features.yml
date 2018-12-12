@@ -2,19 +2,13 @@
 label: Features
 hide_body: true
 is_partial: true
-display_field: identifier
+display_field: type
 fields:
   - type: text
     name: component
     label: Component
     hidden: true
     default: features.html
-    config:
-      required: true
-  - type: text
-    name: identifier
-    label: Identifier
-    default: features
     config:
       required: true
   - type: text
