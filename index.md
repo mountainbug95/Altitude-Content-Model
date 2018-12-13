@@ -44,7 +44,8 @@ sections:
         icon_accent_color: accent4
     component: features.html
     template: features
-  - background_accent_color: accent4
+  - title: Carousel Section
+    background_accent_color: accent4
     component: carousel.html
     template: carousel
   - title: Sed tempus aliquam
