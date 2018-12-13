@@ -2,8 +2,17 @@
 label: Spotlight
 hide_body: true
 is_partial: true
-display_field: type
+display_field: title
 fields:
+  - type: text
+    name: title
+    label: Title
+    description: >-
+      Section title (Also used bt the CMS, even if it is not displayed on the
+      page)
+    default: Spotlight Title
+    config:
+      required: true
   - type: text
     name: component
     label: Component
@@ -11,9 +20,6 @@ fields:
     default: spotlight.html
     config:
       required: true
-  - type: text
-    name: title
-    label: Spotlight Section Title
   - type: textarea
     name: subtitle
     label: Spotlight Section Subtitle
