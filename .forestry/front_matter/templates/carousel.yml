@@ -13,6 +13,18 @@ fields:
     default: Carousel Title
     config:
       required: true
+  - type: select
+    name: background_accent_color
+    label: Background Accent Color
+    description: Sets the color used for the section background
+    config:
+      source:
+        type: custom
+      options:
+        - accent1
+        - accent2
+        - accent3
+        - accent4
   - type: text
     name: component
     label: Component

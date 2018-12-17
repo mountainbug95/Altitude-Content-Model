@@ -287,21 +287,19 @@ collections:
                 widget: object
                 label: Features
                 fields:
+                  - name: title
+                    widget: string
+                    required: true
+                    label: Title
+                    default: Features Section
+                    hint: >-
+                      Section title (Also used bt the CMS, even if it is not
+                      displayed on the page)
                   - name: component
                     widget: hidden
                     required: true
                     label: Component
                     default: features.html
-                  - name: identifier
-                    widget: string
-                    required: true
-                    label: Identifier
-                    default: features
-                  - name: title
-                    widget: string
-                    required: false
-                    label: Title
-                    hint: Section title
                   - name: subtitle
                     widget: markdown
                     required: false
@@ -339,34 +337,36 @@ collections:
                 widget: object
                 label: Carousel
                 fields:
+                  - name: title
+                    widget: string
+                    required: true
+                    label: Title
+                    default: Carousel Title
+                    hint: >-
+                      Section title (Also used bt the CMS, even if it is not
+                      displayed on the page)
                   - name: component
                     widget: hidden
                     required: true
                     label: Component
                     default: carousel.html
-                  - name: identifier
-                    widget: string
-                    required: true
-                    label: Identifier
-                    default: carousel
               - name: spotlight
                 widget: object
                 label: Spotlight
                 fields:
+                  - name: title
+                    widget: string
+                    required: true
+                    label: Title
+                    default: Spotlight Section
+                    hint: >-
+                      Section title (Also used bt the CMS, even if it is not
+                      displayed on the page)
                   - name: component
                     widget: hidden
                     required: true
                     label: Component
                     default: spotlight.html
-                  - name: identifier
-                    widget: string
-                    required: true
-                    label: Identifier
-                    default: spotlight
-                  - name: title
-                    widget: string
-                    required: false
-                    label: Spotlight Section Title
                   - name: subtitle
                     widget: markdown
                     required: false

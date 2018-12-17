@@ -10,7 +10,7 @@ fields:
     description: >-
       Section title (Also used bt the CMS, even if it is not displayed on the
       page)
-    default: Spotlight Title
+    default: Spotlight Section
     config:
       required: true
   - type: text
