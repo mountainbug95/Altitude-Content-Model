@@ -43,14 +43,17 @@ sections:
         icon: fa-envelope
         icon_accent_color: accent4
     component: features.html
+    type: features
     template: features
   - title: Carousel Section
     background_accent_color: accent4
     component: carousel.html
+    type: carousel
     template: carousel
   - title: Sed tempus aliquam
     subtitle: Lorem ipsum dolor sit amet
     component: spotlight.html
+    type: spotlight
     template: spotlight
 menus:
   main:

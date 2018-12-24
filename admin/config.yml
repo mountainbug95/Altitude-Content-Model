@@ -345,6 +345,16 @@ collections:
                     hint: >-
                       Section title (Also used bt the CMS, even if it is not
                       displayed on the page)
+                  - name: background_accent_color
+                    widget: select
+                    required: false
+                    label: Background Accent Color
+                    hint: Sets the color used for the section background
+                    options:
+                      - accent1
+                      - accent2
+                      - accent3
+                      - accent4
                   - name: component
                     widget: hidden
                     required: true
