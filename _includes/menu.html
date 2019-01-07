@@ -8,7 +8,7 @@
     {% if site.menu.actions %}
         <ul class="actions stacked">
             {% for action in site.menu.actions %}
-                <li><a href="{% assign expr_1 = action.url | starts_with: '#' %}{% if expr_1 %}{{ action.url }}{% else %}{{ action.url | link | relative_url }}{% endif %}" class="button{% if action.is_primary %} primary{% endif %} fit{% if action.is_scrolly %} scrolly{% endif %}">{{ action.label }}</a></li>
+                <li><a href="{% assign expr_1 = action.url | starts_with: '#' %}{% if expr_1 %}{{ action.url }}{% else %}{{ action.url | link | relative_url }}{% endif %}" class="button {% if action.is_primary %}primary{% endif %} fit {% if action.is_scrolly %}scrolly{% endif %}">{{ action.label }}</a></li>
             {% endfor %}
         </ul>
     {% endif %}
